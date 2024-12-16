@@ -1,0 +1,40 @@
+.navbar-container {
+    width: 100%;
+    background-color: rgb(135, 178, 235);
+    height: 50px;
+    font-size: 1.5rem;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.home {
+    margin: 0;
+    font-size: 1rem;
+}
+
+.cart {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+}
+
+.cart-icon {
+    font-size: 1rem; /* Ensure the text size is adequate */
+    color: white; /* Text color */
+}
+
+.cart-quantity {
+    background-color: white;
+    color: black;
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+    font-size: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
