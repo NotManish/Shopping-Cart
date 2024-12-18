@@ -1,9 +1,0 @@
-/* Grid container for all product cards */
-.products-container {
-    display: grid;
-    gap: 20px; /* Space between cards */
-    padding: 20px;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    justify-content: center; /* Center the grid items horizontally */
-    box-sizing: border-box;
-}

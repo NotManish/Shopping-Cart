@@ -1,0 +1,150 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.cart-box {
+    width: 65%;
+    margin: auto;
+}
+
+.cart-box img {
+    width: 100px;
+    height: 100px;
+}
+
+.cart-img {
+    display: flex;
+    width: 100px;
+    align-items: center;
+    cursor: pointer;
+}
+
+.cart-img p {
+    font-weight: bold;
+    margin-left: 10px;
+}
+
+.cart-box {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 20px;
+    border-bottom: 2px solid skyblue;
+    padding-bottom: 5px;
+}
+
+.cart-box .button button {
+    padding: 5px 10px;
+    font-weight: bold;
+    border: 2px solid black;
+    cursor: pointer;
+
+
+}
+
+.cart-box .button {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.button .quantity {
+    width: 35px;
+    height: 35px;
+    background-color: wheat;
+    border: 1px solid black;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.cart-box div:nth-child(3) button {
+    padding: 5px 10px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    border: none;
+    outline: none;
+    color: white;
+    background-color: skyblue;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.cart-box div:nth-child(3) button:hover {
+    opacity: 0.8;
+}
+
+.cart-box div:nth-child(3) span {
+    background-color: skyblue;
+    font-weight: 800;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    margin-right: 10px;
+}
+
+.total {
+    display: flex;
+    justify-content: space-between;
+    width: 65%;
+    margin: auto;
+    margin-bottom: 40px;
+}
+
+.total span:nth-child(1) {
+    font-size: 2rem;
+    color: skyblue;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.total span:nth-child(2) {
+    font-size: 2rem;
+    color: green;
+    font-weight: bold;
+}
+
+button:hover {
+    transform: translateY(-1px);
+}
+
+@media(max-width:900px) {
+    .cart-box {
+        width: 90%;
+        margin: auto;
+    }
+
+    .cart-box img {
+        width: 70px;
+        height: 70px;
+        object-fit: cover;
+    }
+
+    .cart-box {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        justify-content: space-center;
+        gap: 30px;
+        margin-top: 20px;
+        border-bottom: 2px solid skyblue;
+        padding-bottom: 5px;
+    }
+
+    .total span:nth-child(1) {
+        font-size: 1.1rem;
+    }
+
+    .total span:nth-child(2) {
+        font-size: 1.1rem;
+    }
+
+    .total {
+
+        width: 90%;
+        margin: auto;
+
+    }
+}

@@ -11,13 +11,15 @@ function App() {
   const [productArray, setProduct] = useState(products);
   const [cartCount, setCartCount] = useState(0); 
   const[cartItem,setCartItem]=useState([]);
+ 
+
 
   return (
     <AppContext.Provider value={{ productArray, cartCount,setCartCount,cartItem,setCartItem}}>
       <Router>
         <Navbar />
         <Routes>
-          <Route path="/home" element={<Products />} />
+          <Route path="/" element={<Products />} />
           <Route path="/cart" element={<Cart />} />
         </Routes>
       </Router>

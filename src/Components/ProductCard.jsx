@@ -1,6 +1,7 @@
-import './ProductCard.css';
+// import './ProductCard.css';
+import '../CSS/ProductCard.css';
 import { AppContext } from '../App';
-import { useContext, useState } from 'react';
+import { useContext } from 'react';
 
 
 function ProductCard({ productInfo }) {
@@ -10,14 +11,11 @@ function ProductCard({ productInfo }) {
         if (!cartItem.includes(productInfo)) {
             let newCartItem = productInfo;
             setCartItem((prevItems) => [...prevItems, newCartItem]);
-            setCartCount(cartCount+1);
-        }else{
+            setCartCount(cartCount + 1);
+
+        } else {
             alert("This item is already added");
         }
-
-
-
-
     }
 
     return (

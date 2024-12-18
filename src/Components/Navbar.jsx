@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom';
-import './Navbar.css';
+// import './Navbar.css';
+import '../CSS/Navbar.css'
 import { useContext } from 'react';
 import { AppContext } from '../App';
 function Navbar() {
@@ -9,13 +10,13 @@ function Navbar() {
   return (
     <div className="navbar-container">
       <div className="home">
-        <Link to="/home">Home</Link>
+        <Link to="/" className="home">Home</Link>
       </div>
       <div className="cart">
         <div className="cart-icon">
-          <Link to="/cart">MyCart</Link>
+          <Link to="/cart" className="cart-icon">MyCart</Link>
         </div>
-        <div className="cart-quantity">{cartCount}</div> 
+        <div className="cart-quantity">{cartCount}</div>
       </div>
     </div>
   );
