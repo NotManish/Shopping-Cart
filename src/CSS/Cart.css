@@ -145,6 +145,8 @@ button:hover {
 
         width: 90%;
         margin: auto;
+        margin-bottom: 50px;
+        padding-top: 5px;
 
     }
 }
