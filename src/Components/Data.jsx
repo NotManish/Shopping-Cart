@@ -71,14 +71,14 @@ export const products = [
     img: "https://images.pexels.com/photos/404280/pexels-photo-404280.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
     quantity: 1,
   },
-  // {
-  //   id: 10,
-  //   title: "My First Book of Pencil Control",
-  //   author: "by Wonder House Books | 25 April 2018",
-  //   price: 89,
-  //   img: "https://m.media-amazon.com/images/I/810OOg88LoL._AC_UY327_FMwebp_QL65_.jpg",
-  //   quantity: 1,
-  // },
+  {
+    id: 10,
+    title: "My First Book of Pencil Control",
+    author: "by Wonder House Books | 25 April 2018",
+    price: 89,
+    img: "https://m.media-amazon.com/images/I/810OOg88LoL._AC_UY327_FMwebp_QL65_.jpg",
+    quantity: 1,
+  },
   {
     id: 11,
     title: "108 Panchatantra Stories",
@@ -95,5 +95,6 @@ export const products = [
     img: "https://m.media-amazon.com/images/I/81Gbz0XnW7L._AC_UY327_FMwebp_QL65_.jpg",
     quantity: 1,
   },
+  
 
 ];

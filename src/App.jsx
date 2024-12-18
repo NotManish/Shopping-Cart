@@ -4,7 +4,7 @@ import Cart from "./Components/Cart";
 import Navbar from "./Components/Navbar";
 import Products from "./Components/Products";
 import { products } from './Components/Data';
-
+import ProductDetails from './Components/ProductDetails';
 export const AppContext = createContext();
 
 function App() {
@@ -21,6 +21,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Products />} />
           <Route path="/cart" element={<Cart />} />
+          <Route path="/product-details" element={<ProductDetails />} />
         </Routes>
       </Router>
     </AppContext.Provider>
