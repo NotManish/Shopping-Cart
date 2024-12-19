@@ -1,8 +1,8 @@
 import { useLocation } from 'react-router-dom';
 
 function ProductDetails() {
-  const { state } = useLocation();
-  const { productInfo } = state ?? {};  // Safe access to state
+ const obj=useLocation();
+ const productInfo=obj.state;
   return (
     <div>
       <h1>{productInfo ? productInfo.id : 'No product info available'}</h1>

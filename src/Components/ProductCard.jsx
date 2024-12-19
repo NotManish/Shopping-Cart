@@ -24,9 +24,9 @@ function ProductCard({ productInfo }) {
             <img src={productInfo.img} alt={productInfo.name} className="product-img" />
             <h3 className="product-name">{productInfo.title}</h3>
             <p className="product-price">Rs. {productInfo.price}</p>
-            <Link to={{ pathname: "/product-details", state: { productInfo } }} className="details-link">
-                  Tap to see details...
-             </Link>
+            <Link to="/product-details" state={ productInfo } className="details-link">
+                Tap to see details...
+            </Link>
 
             <button className="buy-button" onClick={AddToCart}>Add to Cart</button>
         </div>
