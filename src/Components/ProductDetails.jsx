@@ -1,9 +1,14 @@
 import { useLocation } from 'react-router-dom';
 import '../CSS/ProductDetails.css';
+import { useContext } from 'react';
+import { AppContext } from '../App';
+
 
 function ProductDetails() {
-  const { state: productInfo } = useLocation(); // Destructuring directly from location state
-  
+  const{ AddToCart }=useContext(AppContext);
+  const obj = useLocation();
+  const productInfo = obj.state; 
+    
   return (
     <div className='product_details'>
       <div className="product_container">
@@ -14,7 +19,7 @@ function ProductDetails() {
           <h1 className="product_title">{productInfo.title}</h1>
           <p className="product_price">Rs. {productInfo.price}</p>
           <p className="product_description_text">{productInfo.description}</p>
-          <button className="add_to_cart">Add to Cart</button>
+          <button className="add_to_cart" onClick={()=>{AddToCart(productInfo);}}>Add to Cart</button>
         </div>
       </div>
     </div>

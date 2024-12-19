@@ -9,13 +9,22 @@ export const AppContext = createContext();
 
 function App() {
   const [productArray, setProduct] = useState(products);
-  const [cartCount, setCartCount] = useState(0); 
-  const[cartItem,setCartItem]=useState([]);
- 
+  const [cartCount, setCartCount] = useState(0);
+  const [cartItem, setCartItem] = useState([]);
+
+  const AddToCart = (productInfo) => {
+    if (!cartItem.some(item => item.id === productInfo.id)) {
+      setCartItem((prevItems) => [...prevItems, productInfo]);
+      setCartCount(cartCount + 1);
+    } else {
+      alert("This item is already added");
+    }
+  };
+
 
 
   return (
-    <AppContext.Provider value={{ productArray, cartCount,setCartCount,cartItem,setCartItem}}>
+    <AppContext.Provider value={{ productArray, cartCount, setCartCount, cartItem, setCartItem, AddToCart }}>
       <Router>
         <Navbar />
         <Routes>
@@ -27,5 +36,6 @@ function App() {
     </AppContext.Provider>
   );
 }
+
 
 export default App;
