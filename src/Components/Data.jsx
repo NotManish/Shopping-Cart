@@ -26,7 +26,7 @@ export const products = [
   {
     id: 4,
     title: "Iphone 12",
-    description: "Best mobile ever",
+    description: "The iPhone 12 combines sleek design with powerful performance, featuring a 6.1-inch Super Retina XDR display for stunning visuals. Powered by the A14 Bionic chip, it ensures lightning-fast speed and energy efficiency. With 5G capability, advanced dual-camera system, and MagSafe support, the iPhone 12 redefines user experience, blending innovation and elegance seamlessly.",
     price: "90500",
     img: "https://images-na.ssl-images-amazon.com/images/I/71hIfcIPyxS._SL1500_.jpg",
     quantity: 1,
