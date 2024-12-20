@@ -1,16 +1,34 @@
 import { Link } from 'react-router-dom';
-// import './Navbar.css';
 import '../CSS/Navbar.css'
-import { useContext } from 'react';
+import { useContext,useState } from 'react';
 import { AppContext } from '../App';
 function Navbar() {
-  // Destructure cartCount from context
+
   const { cartCount } = useContext(AppContext);
+  const [query, setQuery] = useState("");
+
+  const handleSearchChange = (event) => {
+    setQuery(event.target.value);
+  };
+  const handleSearchSubmit = () => {
+    onSearch(query);
+  };
+
+  console.log("query value is",query);
 
   return (
     <div className="navbar-container">
       <div className="home">
         <Link to="/" className="home">Home</Link>
+      </div>
+      <div className="search-container">
+        <input
+          type="text"
+          placeholder="Search products..."
+          value={query}
+          onChange={handleSearchChange}
+        />
+        <button onChange={handleSearchSubmit}>Search</button>
       </div>
       <div className="cart">
         <div className="cart-icon">
