@@ -89,12 +89,12 @@ export const products = [
   },
   {
     id: 12,
-    title: "Amazing Questions & Answers Science",
+    title: "Amazing Questions & Answers",
     author: "by Om Books Editorial Team  | 25 November 2018",
     price: 143,
     img: "https://m.media-amazon.com/images/I/81Gbz0XnW7L._AC_UY327_FMwebp_QL65_.jpg",
     quantity: 1,
   },
-  
+
 
 ];
