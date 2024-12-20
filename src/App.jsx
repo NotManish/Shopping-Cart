@@ -1,3 +1,4 @@
+import './App.css';
 import React, { createContext, useState } from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Cart from "./Components/Cart";
@@ -5,9 +6,12 @@ import Navbar from "./Components/Navbar";
 import Products from "./Components/Products";
 import { products } from './Components/Data';
 import ProductDetails from './Components/ProductDetails';
+
+
 export const AppContext = createContext();
 
 function App() {
+
   const [productArray, setProduct] = useState(products);
   const [cartCount, setCartCount] = useState(0);
   const [cartItem, setCartItem] = useState([]);
@@ -20,8 +24,6 @@ function App() {
       alert("This item is already added");
     }
   };
-
-
 
   return (
     <AppContext.Provider value={{ productArray, cartCount, setCartCount, cartItem, setCartItem, AddToCart }}>
