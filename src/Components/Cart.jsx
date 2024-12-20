@@ -1,7 +1,8 @@
-// import './Cart.css';
+
 import '../CSS/Cart.css';
 import { AppContext } from '../App';
 import { useContext } from 'react';
+import { Link } from 'react-router-dom';
 
 
 function Cart() {
@@ -30,28 +31,41 @@ function Cart() {
             );
             setCartItem(updatedCart);
         }
-
     }
+
+    const clearCart = () => {
+        setCartItem([]);
+        setCartCount(0);
+    }
+
     return (
         <div>
+            {cartItem.length > 0 && <button className='clear-cart-button' onClick={clearCart}>clear cart</button>}
             {
                 cartItem.map((item) => {
+
                     return <div className='cart-box' key={item.id}>
+
                         <div className='cart-img'>
-                            <img src={item.img} alt="Item" />
-                            <p>{item.title}</p>
+                            {<Link to="/product-details" state={item} className='cart-img'>
+                                <img src={item.img} alt="Item" />
+                                <p>{item.title}</p>
+                            </Link>}
                         </div>
+
                         <div className='button'>
                             <button onClick={() => { increaseQuantity(item.id); }}>+</button>
                             <div className='quantity'>{item.quantity}</div>
                             <button onClick={() => { decreaseQuantity(item); }}>-</button>
                         </div>
+
                         <div>
                             <span>Price: Rs. {item.price}/-</span>
                             <button onClick={() => { deleteItem(item.id); }}>Remove</button>
                         </div>
 
                     </div>
+
                 })
             }
             {
@@ -60,6 +74,7 @@ function Cart() {
                     <span>Rs. {totalPrice} </span>
                 </div> : <h1 style={{ textAlign: 'center' }}>Your cart is empty.</h1>
             }
+
         </div>
     )
 }
