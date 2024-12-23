@@ -11,10 +11,12 @@ import ProductDetails from './Components/ProductDetails';
 export const AppContext = createContext();
 
 function App() {
-
+  const originalProductArray = products;
   const [productArray, setProduct] = useState(products);
   const [cartCount, setCartCount] = useState(0);
   const [cartItem, setCartItem] = useState([]);
+  const [searchQuery, setSearchQuery] = useState("");
+
 
   const AddToCart = (productInfo) => {
     if (!cartItem.some(item => item.id === productInfo.id)) {
@@ -26,7 +28,7 @@ function App() {
   };
 
   return (
-    <AppContext.Provider value={{ productArray, cartCount, setCartCount, cartItem, setCartItem, AddToCart }}>
+    <AppContext.Provider value={{ originalProductArray, productArray, setProduct, cartCount, setCartCount, cartItem, setCartItem, AddToCart, searchQuery, setSearchQuery }}>
       <Router>
         <Navbar />
         <Routes>

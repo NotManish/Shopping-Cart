@@ -69,11 +69,19 @@ function Cart() {
                 })
             }
             {
-                cartItem.length > 0 ? <div className='total '><
-                    span>Total price</span>
-                    <span>Rs. {totalPrice} </span>
+                cartItem.length > 0 ? <div className='total '>
+                    <div className='cart-price'>
+                        <span>Total price  </span>
+                        <span>Rs. {totalPrice}  </span>
+                    </div>
+                    <div className='checkout-button'>
+                        <button>checkout</button>
+                    </div>
+
                 </div> : <h1 style={{ textAlign: 'center' }}>Your cart is empty.</h1>
             }
+
+
 
         </div>
     )

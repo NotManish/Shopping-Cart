@@ -101,11 +101,31 @@
 }
 
 .total {
-    display: flex;
-    justify-content: space-between;
+
     width: 65%;
     margin: auto;
     margin-bottom: 40px;
+}
+
+.cart-price {
+    display: flex;
+    justify-content: space-between;
+}
+
+.checkout-button {
+    display: flex;
+    flex-direction: row-reverse;
+    margin-top: 10px;
+}
+
+.checkout-button button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 12px 24px;
+    font-size: 16px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
 }
 
 .total span:nth-child(1) {
