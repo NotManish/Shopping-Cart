@@ -6,7 +6,7 @@ import Navbar from "./Components/Navbar";
 import Products from "./Components/Products";
 import { products } from './Components/Data';
 import ProductDetails from './Components/ProductDetails';
-
+import OrderDetails from './Components/Orderdetails';
 
 export const AppContext = createContext();
 
@@ -35,6 +35,8 @@ function App() {
           <Route path="/" element={<Products />} />
           <Route path="/cart" element={<Cart />} />
           <Route path="/product-details" element={<ProductDetails />} />
+          <Route path="/order" element={<OrderDetails/>} />
+
         </Routes>
       </Router>
     </AppContext.Provider>

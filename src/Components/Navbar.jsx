@@ -2,11 +2,14 @@ import { Link } from "react-router-dom";
 import "../CSS/Navbar.css";
 import { useContext } from "react";
 import { AppContext } from "../App";
+import { useNavigate } from "react-router-dom";
 
 function Navbar() {
   const { cartCount, searchQuery, setSearchQuery, setProduct, originalProductArray } = useContext(AppContext);
-
+  const navigate=useNavigate();
+  
   const handleSearchChange = (event) => {
+    navigate('/');
     const query = event.target.value.trimStart().replace(/\s+/g, " ");
     setSearchQuery(query);
     const filteredProducts = originalProductArray.filter((product) =>

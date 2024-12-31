@@ -3,6 +3,8 @@ import '../CSS/Cart.css';
 import { AppContext } from '../App';
 import { useContext } from 'react';
 import { Link } from 'react-router-dom';
+import khaltiConfig from '../khalticonfig';
+import KhaltiCheckout from 'khalti-checkout-web';
 
 
 function Cart() {
@@ -36,6 +38,11 @@ function Cart() {
     const clearCart = () => {
         setCartItem([]);
         setCartCount(0);
+    }
+
+    const handleCheckout = () => {
+        const checkout = new KhaltiCheckout(khaltiConfig);
+        checkout.show({amount: totalPrice*100});
     }
 
     return (
@@ -75,7 +82,7 @@ function Cart() {
                         <span>Rs. {totalPrice}  </span>
                     </div>
                     <div className='checkout-button'>
-                        <button>checkout</button>
+                        <button onClick={handleCheckout}>checkout</button>
                     </div>
 
                 </div> : <h1 style={{ textAlign: 'center' }}>Your cart is empty.</h1>
